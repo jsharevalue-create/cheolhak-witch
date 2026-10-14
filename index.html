@@ -2068,7 +2068,7 @@ var ME={
 // ── 가장 많은 기운 묶음별 찌르는 말 (00·06·12) ──
 var MOST={
  '관성':{sting:'솔직히 말할게요. 착한 게 아니라 거절을 못 하는 거예요.',
-   body:'회의에선 「네, 제가 할게요」 해 놓고 집에 와서 「왜 또 내가 다 맡았지」 한 적 있죠? 팔자에 책임과 규칙의 기운이 많아서 그래요. 맡으면 끝까지 해요. 그게 일 잘하는 이유고, 지치는 이유예요.',
+   body:'부탁받으면 「네, 제가 할게요」 해 놓고 집에 와서 「왜 또 내가 다 맡았지」 한 적 있죠? 팔자에 책임과 규칙의 기운이 많아서 그래요. 맡으면 끝까지 해요. 그게 일 잘하는 이유고, 지치는 이유예요.',
    trap:'「괜찮아요」 하고 혼자 삼키다가 한 번에 터지는 마음',sign:'「괜찮아요」를 하루 세 번 넘게 말해요. 잠이 줄고 말이 빨라져요. 별것 아닌 말에 서운해요.',
    turn:'대답하기 전에 물 한 잔 마시고, 메모에 「지금 내가 원하는 게 뭐지?」 한 줄만 쓰세요. 그리고 혼자 삼키지 말고 「이건 좀 같이 해 줄래요?」 하고 말로 부탁하세요.',
    habit:'자기 전에 「오늘 거절 못 한 것 하나」만 적으세요. 일주일에 한 번은 「그건 어려워요」를 실제로 말해 보세요.',
@@ -2136,6 +2136,27 @@ var TYPE={
    rank:[['◎','성과만큼 받는 자리(영업·거래·사업)','움직인 만큼 돌아와요.'],['○','돈을 다루는 조직(금융·구매·운영)','숫자 감각이 바로 실력이 돼요.'],['△','고정급만 받는 자리','버틸 수는 있는데 아까워해요.'],['✕','돈과 상관없는 일만 하는 자리','동기가 안 생겨요.']],
    boss:'맞는 상사는 <b>성과를 숫자로 인정해 주는 사람</b>이에요. 안 맞는 상사는 「다 같이 고생했잖아」로 뭉개는 사람.'}};
 
+var INDEP={
+ org_own:{sting:'혼자 일하는데 왜 이렇게 불안하냐고요? 원래 기댈 울타리가 있어야 힘이 나는 사람이라서 그래요.',comfort:'혼자 일하는 걸 잘못 골랐다는 말이 아니에요. 일하는 방식을 바꾸면 돼요.',
+   rank:[['◎','고정 거래처 한두 곳과 길게 가는 계약','울타리가 생겨야 힘이 나요. 안정된 거래처가 곧 내 소속이에요.'],['○','팀으로 하는 프로젝트에 핵심으로 들어가기','내 몫이 분명하면 말이 먹혀요.'],['△','건건이 새 손님 찾기','매번 처음부터라 금방 지쳐요.'],['✕','혼자 판을 끝없이 넓히기','혼자 다 쥐면 버티는 힘이 모자라요.']],
+   boss:'맞는 거래처는 <b>맡기고 결과로 보는 곳</b>이에요. 안 맞는 거래처는 사사건건 확인하는 곳. 그런 곳과 일하면 말이 칼이 돼요.'},
+ org:{sting:'자유로운데 불안하죠? 정해진 계단이 없어서 그래요.',comfort:'혼자 일해도 괜찮아요. 대신 내 계단을 내가 만들어야 해요.',
+   rank:[['◎','기준이 분명한 큰 거래처의 위탁·계약 일','규칙이 정해진 일에서 제일 강해요.'],['○','자격·인증을 앞세운 일','배운 걸 인정받으면 오래 가요.'],['△','유행 따라 바뀌는 일','매번 판이 바뀌면 지쳐요.'],['✕','기준 없이 즉흥으로 하는 일','정해진 길이 없으면 힘이 안 나요.']],
+   boss:'맞는 거래처는 <b>기준이 분명한 곳</b>이에요. 안 맞는 거래처는 기분 따라 말이 바뀌는 곳.'},
+ expert:{rank:[['◎','내 전문 분야 하나로만 받는 일','깊이가 바로 단가가 돼요.'],['○','자문·강의로 깊이를 파는 일','아는 걸 나눌수록 이름이 커져요.'],['△','이것저것 다 해 주는 일','얕고 넓으면 내 장점이 죽어요.'],['✕','싸게 많이 받는 일','가격 경쟁은 내 싸움이 아니에요.']],
+   boss:'맞는 손님은 <b>내 전문성을 믿어 주는 사람</b>이에요. 안 맞는 손님은 깊이 대신 속도만 보는 사람.'},
+ own:{sting:'혼자 일하는 거, 잘 고른 거예요. 문제는 다 혼자 하려는 거예요.',comfort:'내 판을 짜는 사람이 내 판을 짠 거예요. 이제 판을 오래 가게 만들면 돼요.',
+   rank:[['◎','내 이름·브랜드를 거는 일','내 판이라 힘이 나요. 대신 돈 관리는 꼭 따로 챙기세요.'],['○','결정을 맡겨 주는 손님과의 일','내 말이 바로 반영돼요.'],['△','시키는 대로만 하는 하청','버틸 수는 있는데 속이 끓어요.'],['✕','방식까지 정해 주는 장기 계약','숨이 막혀요.']],
+   boss:'맞는 손님은 <b>맡겨 주는 사람</b>이에요. 안 맞는 손님은 방식까지 정해 주는 사람.'},
+ trade:{rank:[['◎','성과만큼 받는 구조(수수료·지분)','움직인 만큼 돌아와요.'],['○','물건·서비스를 사고파는 일','숫자 감각이 바로 실력이 돼요.'],['△','시간당 고정 단가','버틸 수는 있는데 아까워해요.'],['✕','돈 얘기를 못 꺼내는 관계','동기가 안 생겨요.']],
+   boss:'맞는 거래처는 <b>성과를 숫자로 쳐 주는 곳</b>이에요. 안 맞는 거래처는 「다음에 챙겨 줄게」로 미루는 곳.'}};
+var HOMEV={
+ org_own:{sting:'다시 뭔가 하고 싶은데, 어디서부터 해야 할지 모르겠죠?'},
+ org:{sting:'「이 나이에 뭘」 하는 마음 들죠? 계단은 언제든 다시 밟으면 돼요.'},
+ expert:{sting:'배운 게 아깝다는 생각, 자주 하죠? 아까운 거 맞아요.'},
+ own:{sting:'가만히 있으면 답답하죠? 원래 내 판을 짜야 숨이 쉬어지는 사람이라서 그래요.'},
+ trade:{sting:'내 돈 내가 벌고 싶은 마음, 숨기지 마세요.'}};
+var HOME_COMFORT='쉬고 있다고 멈춘 게 아니에요. 다시 일한다면 아래 같은 자리가 맞아요.';
 function workType(p){
   var g=p.dist.group, t=X.talent(p), most=mostGroup(p);
   if(most==='재성'&&p.strength.strong) return 'trade';
@@ -2227,7 +2248,8 @@ var MATE={'비겁':['친구 같은 사람','편하고 대등한데, 서로 지�
  '인성':['어른스럽고 품어 주는 사람','기대기 좋은데, 잔소리가 따라와요.','고마운 건 말로 하세요. 잔소리는 걱정이라고 번역해서 들으세요.']};
 
 // ── 일터 갈등 ──
-function clashPattern(p){
+function clashPattern(p,ind){
+  var W=function(t){ return ind?t.replace(/윗사람을/g,'거래처를').replace(/윗사람이/g,'거래처가').replace(/윗사람/g,'거래처').replace(/동료와/g,'함께 일하는 사람과').replace(/동료를/g,'함께 일하는 사람을').replace(/동료/g,'함께 일하는 사람').replace(/회의/g,'미팅'):t; };
   var g=p.dist.group, t=p.dist.ten, out=[];
   if(t['상관']>0&&g['관성']>0) out.push(['맞는 말을 너무 세게 해서 손해 보는 거예요.','규칙의 기운 옆에 하고 싶은 말을 꺼내는 기운이 붙어 있어요. 그래서 참다가 <b>바른말로 윗사람을 들이받아요.</b>','반대할 말은 하루 재우세요. 「안 됩니다」 말고 「이렇게 하면 어떨까요」로, 대안을 같이 들고 가세요.']);
   if(g['비겁']>=2) out.push(['일 못해서가 아니라 공을 나눌 줄 몰라서 부딪쳐요.','나를 세우는 기운이 많아서 동료와 은근히 견줘요. 인정하기 싫겠지만요.','잘된 일엔 같이 한 사람 이름을 먼저 부르세요. 공을 나누면 견주던 사람이 내 편이 돼요.']);
@@ -2235,7 +2257,7 @@ function clashPattern(p){
   if(g['인성']>=3) out.push(['생각이 깊은 건 좋은데, 회의 끝나고 생각나면 소용없어요.','배우고 생각하는 기운이 많아서 <b>답이 늦게 나와요.</b> 그 사이에 남이 먼저 말해요.','회의 전에 내 의견을 세 줄로 미리 적어 가세요.']);
   if(g['재성']>=3) out.push(['계산이 빠른 건 좋은데, 그게 얼굴에 다 보여요.','굴리는 기운이 많아서 <b>손익이 먼저 보여요.</b> 사람들이 그걸 느껴요.','손해 보는 일 하나는 일부러 맡으세요. 그게 나중에 사람으로 돌아와요.']);
   if(!out.length) out.push(['부딪치는 이유는 일이 아니라 속도예요.','내 속도와 팀 속도가 달라서 부딪쳐요.','내 속도를 말로 알려 주세요. 「이건 금요일까지 할게요」처럼요.']);
-  return out.slice(0,2);
+  return out.slice(0,2).map(function(o){ return o.map(W); });
 }
 
 // ── 질문 ──
@@ -2310,10 +2332,11 @@ function read(inp){
   var cntEl={}; EL.forEach(function(e,i){ cntEl[e]=p.cnt[i]; });
   var mostEl=EL[p.cnt.indexOf(Math.max.apply(null,p.cnt))], missEl=p.missing[0]||null;
   if(!missEl){ var mi=0; for(var i=1;i<5;i++) if(p.cnt[i]<p.cnt[mi]) mi=i; missEl=EL[mi]; }
-  var wt=workType(p), TY=TYPE[wt], SE=seasons(p), cs=X.careerSeason(p);
+  var IND=['self','freelance'].indexOf(inp.jk)>=0, HOME=['homemaker','rest','retired'].indexOf(inp.jk)>=0;
+  var wt=workType(p), TY=IND?Object.assign({},TYPE[wt],INDEP[wt]):HOME?Object.assign({},TYPE[wt],HOMEV[wt],{comfort:HOME_COMFORT}):TYPE[wt], SE=seasons(p), cs=X.careerSeason(p);
   var ganEl=EL[X.groupElement(X.STE[p.me],p.ganpan_group)];
   var jobs=X.jobPool(p,X.groupElement(X.STE[p.me],p.ganpan_group)), jl=pickJobs(jobs.by.now,inp.job||''), fut=jobs.by.future.slice(0,2), trad=jobs.by.trad.slice(0,3);
-  var askLabel=ASK[inp.worry]||'앞으로 어떻게 되나';
+  var askLabel=(inp.worry==='move'&&['self','freelance'].indexOf(inp.jk)>=0)?'일하는 곳을 옮길까':(ASK[inp.worry]||'앞으로 어떻게 되나');
   var ch=[], A=function(no,title,sub,paras,free){ ch.push({no:no,title:title,sub:sub||'',paras:paras,free:!!free}); };
   var jobName=inp.job||'', hasJob=['employee','public','self','freelance'].indexOf(inp.jk)>=0;
   var past1=X.workType(p,now-1,tops), past2=X.workType(p,now-2,tops), lp1=X.loveType(p,now-1);
@@ -2338,12 +2361,12 @@ function read(inp){
 
   // 01 일 체질
   var r01=[{t:'sting',s:TY.sting},{t:'p',s:'판정부터 할게요. <b>당신은 「'+TY.name+'」이에요.</b> '+TY.comfort},{t:'p',s:'왜 그러냐면. '+TY.why},
-    {t:'h3',s:'맞는 자리, 순서대로'},{t:'rank',rows:TY.rank}];
+    {t:'h3',s:IND?'맞는 일하는 방식, 순서대로':HOME?'다시 일한다면, 맞는 자리 순서':'맞는 자리, 순서대로'},{t:'rank',rows:TY.rank}];
   if(g['재성']===0&&(wt==='own'||wt==='trade')) r01.push({t:'p',s:'하나 덧붙일게요. 팔자에 돈 담는 그릇이 비어 있어요. 판은 잘 짜도 돈 계산에서 새요. 내 판을 짤 거면 돈 챙기는 사람을 옆에 두세요.'});
-  r01.push({t:'h3',s:'맞는 상사, 안 맞는 상사'},{t:'p',s:TY.boss+(g['재성']===0?' 옆에 두면 좋은 동료는 숫자와 돈을 챙기는 사람이에요. 나한테 비어 있는 걸 채워 줘요.':'')});
-  if((inp.jk==='self'||inp.jk==='freelance')&&(wt==='org'||wt==='org_own')) r01.push({t:'p',s:'지금 '+(inp.jk==='self'?'장사·사업':'프리랜서')+'를 하고 있다고 했죠. 그렇다고 잘못 고른 건 아니에요. 다만 혼자 다 쥐면 지쳐요. <b>규칙과 역할을 정해서 조직처럼 굴리세요.</b> 사람을 두든, 거래처와 계약을 분명히 하든. 그래야 이 체질이 힘을 써요.'});
+  r01.push({t:'h3',s:IND?(TY.boss.indexOf('맞는 손님')===0?'맞는 손님, 안 맞는 손님':'맞는 거래처, 안 맞는 거래처'):'맞는 상사, 안 맞는 상사'},{t:'p',s:TY.boss+(g['재성']===0?' 옆에 두면 좋은 '+(IND?'파트너':'동료')+'는 숫자와 돈을 챙기는 사람이에요. 나한테 비어 있는 걸 채워 줘요.':'')});
+  if(IND&&(wt==='org'||wt==='org_own')) r01.push({t:'p',s:'지금 '+(inp.jk==='self'?'장사·사업':'프리랜서')+'를 하고 있다고 했죠. 혼자 다 쥐면 지쳐요. <b>규칙과 역할을 정해서 조직처럼 굴리세요.</b> 사람을 두든, 거래처와 계약을 분명히 하든. 그래야 이 체질이 힘을 써요.'});
   if(inp.jk==='jobseeker') r01.push({t:'p',s:'지금 일을 찾는 중이라고 했죠. 위 순서에서 ◎부터 원서를 넣으세요. △는 붙어도 오래 못 가요.'});
-  A('01','당신, 회사 체질이에요 아니에요?','판정 하나, 맞는 자리 순서',r01);
+  A('01',IND?'당신, 혼자 일할 체질이에요?':HOME?'당신, 어떤 일 체질이에요?':'당신, 회사 체질이에요 아니에요?',IND?'판정 하나, 맞는 일하는 방식 순서':'판정 하나, 맞는 자리 순서',r01);
 
   // 02 맞는 일
   var r02=[{t:'sting',s:'「나 뭐 하고 살아야 하지」 검색할 시간에, 지금 하는 일부터 제대로 보세요.'},
@@ -2370,19 +2393,19 @@ function read(inp){
   A('03','커리어 시즌 지도','스무 살부터, 10년마다 한 칸',r03);
 
   // 04 해마다 일
-  var wsName={salary:'이직·승진·연봉',seek:'취업',biz:'사업',home:'다시 일하기'}[ws];
+  var wsName={salary:'이직·승진·연봉',seek:'취업',biz:inp.jk==='freelance'?'일감':'사업',home:'다시 일하기'}[ws];
   A('04',{salary:'남을까 옮길까, 해마다',seek:'언제 붙을까, 해마다',biz:'키울까 다질까, 해마다',home:'언제 다시 시작할까, 해마다'}[ws],wsName+', 해마다 판정 하나',[
-    {t:'sting',s:T[0].w==='flat'||T[0].w==='fit'?({seek:'아무 데나 붙으려고 하지 마세요. 올해는 쌓는 해예요.',biz:'매출 앱 새로고침은 그만. 올해는 키우는 해가 아니라 다지는 해예요.',home:'남들 다 뛰는 것 같아서 불안하죠? 올해는 쉬어도 되는 해예요.',salary:'이직 사이트 새로고침은 그만. 올해는 옮기는 해가 아니에요.'}[ws]):T[0].w==='clash'?'올해 흔들리는 건 당신 탓이 아니에요. 그런데 홧김에 움직이면 그건 당신 탓이 돼요.':'올해 기운이 받쳐 주는데, 가만히 있으면 그게 제일 아까워요.'},
-    {t:'p',s:'지난 2년부터 볼게요. '+[now-2,now-1].map(function(y){ var t=X.workType(p,y,tops); return y+'년은 '+{peak:'일이 크게 섰던 해',rise:'일이 붙잡아 주던 해',fit:'하는 만큼 결과가 나던 해',flat:'제자리였던 해',clash:'일 자리가 흔들렸던 해'}[t]; }).join(', ')+'였어요. 맞나요? 맞으면 아래도 믿고 보셔도 돼요.'},
+    {t:'sting',s:T[0].w==='flat'||T[0].w==='fit'?({seek:'아무 데나 붙으려고 하지 마세요. 올해는 쌓는 해예요.',biz:inp.jk==='freelance'?'견적 문의 새로고침은 그만. 올해는 일을 늘리는 해가 아니라 다지는 해예요.':'매출 앱 새로고침은 그만. 올해는 키우는 해가 아니라 다지는 해예요.',home:'남들 다 뛰는 것 같아서 불안하죠? 올해는 쉬어도 되는 해예요.',salary:'이직 사이트 새로고침은 그만. 올해는 옮기는 해가 아니에요.'}[ws]):T[0].w==='clash'?'올해 흔들리는 건 당신 탓이 아니에요. 그런데 홧김에 움직이면 그건 당신 탓이 돼요.':'올해 기운이 받쳐 주는데, 가만히 있으면 그게 제일 아까워요.'},
+    {t:'p',s:'지난 2년부터 볼게요. '+(function(){ var PW={peak:'일이 크게 섰던 해',rise:'일이 붙잡아 주던 해',fit:'하는 만큼 결과가 나던 해',flat:'제자리였던 해',clash:'일 자리가 흔들렸던 해'}, a=PW[X.workType(p,now-2,tops)], b=PW[X.workType(p,now-1,tops)]; return a===b?(now-2)+'년과 '+(now-1)+'년은 둘 다 '+a:(now-2)+'년은 '+a+', '+(now-1)+'년은 '+b; })()+'였어요. 맞나요? 맞으면 아래도 믿고 보셔도 돼요.'},
     {t:'yr',rows:dedupe(T.map(function(r){ return {k:String(r.yy),nm:r.wv[0]+'.',s:r.wv[1]}; }))},
     {t:'h3',s:'움직이기 전에 갖춰 둘 셋'},
     {t:'p',s:{salary:'하나, 올해 시작한 자격이나 기술. 둘, 숫자로 적은 성과 세 줄. 셋, 옮겨 갈 쪽에 아는 사람 한 명. 셋 다 있으면 내가 고르는 쪽이 되고, 하나도 없으면 회사가 나를 고르는 쪽이 돼요.',seek:'하나, 끝까지 마친 자격이나 포트폴리오 하나. 둘, 가고 싶은 곳 세 군데의 이름. 셋, 그 업계 사람 한 명. 셋 다 있으면 붙는 해에 바로 붙어요.',biz:'하나, 석 달 버틸 돈. 둘, 단골 열 명의 연락처. 셋, 그만둘 기준 한 줄. 이 셋 없이 키우면 운이 좋아도 새요.',home:'하나, 다시 하고 싶은 일 한 줄. 둘, 그 일 하는 사람 한 명. 셋, 일주일에 쓸 수 있는 시간. 셋이 정해지면 시작이 쉬워져요.'}[ws]}]);
 
   // 05 일터 갈등
-  var cp=clashPattern(p), r05=[{t:'sting',s:cp[0][0]}];
+  var cp=clashPattern(p,IND||HOME), r05=[{t:'sting',s:cp[0][0]}];
   cp.forEach(function(c,i){ if(i) r05.push({t:'h3',s:'하나 더'}); r05.push({t:'p',s:c[1]}); r05.push({t:'p',s:'<b>이렇게 하세요.</b> '+c[2]}); });
-  r05.push({t:'p',s:'부딪치기 전 신호는 이래요. 회의 끝나고 머릿속으로 할 말을 다시 쓰고 있으면 신호. 메신저에 쓴 말을 지웠다 썼다 하면 그것도 신호.'});
-  A('05','회사에서 자꾸 부딪치는 이유','상사, 동료, 공 나누기',r05);
+  r05.push({t:'p',s:'부딪치기 전 신호는 이래요. '+(IND||HOME?'미팅이나 통화가':'회의가')+' 끝나고 나서도 머릿속으로 할 말을 다시 쓰고 있으면 신호. 메신저에 쓴 말을 지웠다 썼다 하면 그것도 신호.'});
+  A('05',IND?'일하다 자꾸 부딪치는 이유':HOME?'사람들과 자꾸 부딪치는 이유':'회사에서 자꾸 부딪치는 이유',IND?'거래처, 손님, 함께 일하는 사람':HOME?'가족, 이웃, 함께하는 사람':'상사, 동료, 공 나누기',r05);
 
   // 06 마음 사용설명서
   A('06','당신 마음 사용설명서','어떤 마음에 잘 빠지는지, 그때 어떻게 돌리는지',[
@@ -2464,7 +2487,7 @@ return {read:read};
 "use strict";
 var $=function(s){ return document.querySelector(s); }, NOW=new Date(), NOWY=NOW.getFullYear();
 var OPT={sex:[['f','여자'],['m','남자']],love:[['single','혼자예요'],['dating','연애 중'],['married','결혼했어요'],['reunion','헤어진 사람 있어요']],
- worry:[['move','회사를 옮길까'],['switch','직업을 바꿀까'],['biz','사업을 해 볼까'],['close','하던 걸 접을까'],['meet','새 인연은 언제'],['marry','결혼은 언제'],['reunion','헤어진 사람 다시 만날까'],['love','부부 사이'],['buy','집이든 큰 거든 살까'],['rest','좀 쉴까']],
+ worry:[['move','회사·일터를 옮길까'],['switch','직업을 바꿀까'],['biz','사업을 해 볼까'],['close','하던 걸 접을까'],['meet','새 인연은 언제'],['marry','결혼은 언제'],['reunion','헤어진 사람 다시 만날까'],['love','부부 사이'],['buy','집이든 큰 거든 살까'],['rest','좀 쉴까']],
  cal:[['solar','양력'],['lunar','음력']],
  jk:[['employee','회사 다녀요'],['public','공무원·교사'],['self','장사·사업'],['freelance','프리랜서'],['jobseeker','일 찾는 중'],['homemaker','살림'],['rest','쉬는 중'],['retired','은퇴']]};
 document.querySelectorAll('.seg').forEach(function(box){ var n=box.dataset.name;
@@ -2503,7 +2526,7 @@ function para(x){
   return '<p>'+rich(x.s)+'</p>';
 }
 function render(r){
-  var C=r.chapters, h='<section class="head"><span class="lb">철학마녀가 본 당신</span><h2>'+esc(r.me)+' 같은 사람</h2><span class="pl">'+esc(r.pillars)+'</span></section>';
+  var C=r.chapters, h='<section class="head"><span class="lb">철학마녀가 본 당신</span><h2>'+esc(r.me)+' 같은 사람</h2><span class="pl">'+esc(r.pillars.replace('시 ??','시 모름'))+'</span></section>';
   h+='<nav class="toc" aria-label="목차">'+C.map(function(c){ return '<a href="#c'+c.no+'"><span class="n">'+c.no+'</span><span class="t">'+esc(c.title)+(c.free?'<span class="badge">무료</span>':'')+(c.sub?'<span class="d">'+esc(c.sub)+'</span>':'')+'</span></a>'; }).join('')+'</nav>';
   C.forEach(function(c,i){
     if(i===1) h+='<div class="pay"><strong>여기까지가 무료예요.</strong><span>정식판은 13,900원 · 테스트판이라 전부 보여 드려요</span></div>';
